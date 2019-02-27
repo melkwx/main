@@ -2350,6 +2350,300 @@ Use case resumes at step 1.</p>
 </li>
 </ul>
 </div>
+<h3 id="use-case-activityedit" class="discrete">Use case: activityEdit</h3>
+<div class="paragraph">
+<p><strong>Main Success Scenario (MSS)</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list activities</p>
+</li>
+<li>
+<p>Club Manager shows a list of activities</p>
+</li>
+<li>
+<p>User requests to edit details of an activity in the displayed list</p>
+</li>
+<li>
+<p>Club Manager edits the details of the specified member with given information.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The list is empty</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+<li>
+<p>3a. The given index or parameters is/are invalid.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3a1. Club Manager shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-activitysort" class="discrete">Use case: activitySort</h3>
+<div class="paragraph">
+<p><strong>Main Success Scenario (MSS)</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to sort the activity list</p>
+</li>
+<li>
+<p>Club Manager sorts the activity list according to date</p>
+</li>
+<li>
+<p>Club Manager shows the sorted list</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The list is empty.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+<li>
+<p>2b. The given parameter is invalid.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2b1. Club Manager shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 1.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-activityaddmember" class="discrete">Use case: activityAddMember</h3>
+<div class="paragraph">
+<p><strong>Main Success Scenario (MSS)</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list activities</p>
+</li>
+<li>
+<p>Club Manager shows a list of activities</p>
+</li>
+<li>
+<p>User requests to add a member to the attendance list of an activity</p>
+</li>
+<li>
+<p>Club Manager adds the member to the activity&#8217;s attendance list</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The list is empty.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+<li>
+<p>3a. The given activity index is invalid</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3a1. Club Manager shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3b. The specified member does not exist.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3b1. Club Manager shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3c. The specified member is already in the attendance list.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3c1. Club Manager shows an error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-activityremovemember" class="discrete">Use case: activityRemoveMember</h3>
+<div class="paragraph">
+<p><strong>Main Success Scenario (MSS)</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list activities</p>
+</li>
+<li>
+<p>Club Manager shows a list of activities</p>
+</li>
+<li>
+<p>User requests to remove a member from the attendance list of an activity</p>
+</li>
+<li>
+<p>Club Manager removes the member to the activity&#8217;s attendance list</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The list is empty.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+<li>
+<p>3a. The given activity index is invalid</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3a1. Club Manager shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3b. The specified member does not exist.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3b1. Club Manager shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3c. The specified member is not in the attendance list.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3c1. Club Manager shows an error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-activitydelete" class="discrete">Use case: activityDelete</h3>
+<div class="paragraph">
+<p><strong>Main Success Scenario (MSS)</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list activities</p>
+</li>
+<li>
+<p>Club Manager shows a list of activities</p>
+</li>
+<li>
+<p>User requests to permanently delete an activity from the activity list</p>
+</li>
+<li>
+<p>Club Manager deletes the activity.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The list is empty.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+<li>
+<p>3a. The given activity index is invalid</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3a1. Club Manager shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p><em>{More to be added}</em></p>
 </div>
@@ -2539,4 +2833,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-02-23 08:27:13 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-02-27 10:22:37 UTC</div></div></div></body></html>
