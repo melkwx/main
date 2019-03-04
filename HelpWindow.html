@@ -18,8 +18,8 @@
 <li><a href="#editing-a-member-code-memberedit-code">3.3. Editing a member : <code>memberEdit</code></a></li>
 <li><a href="#locating-members-by-name-code-memberfind-code">3.4. Locating members by name: <code>memberFind</code></a></li>
 <li><a href="#deleting-a-member-code-memberdelete-code">3.5. Deleting a member : <code>memberDelete</code></a></li>
-<li><a href="#set-member-as-active-code-membersetactive-index-code">3.6. Set member as Active : <code>memberSetActive Index</code></a></li>
-<li><a href="#set-member-as-active-code-membersetinactive-index-code">3.7. Set member as Active : <code>memberSetInactive Index</code></a></li>
+<li><a href="#set-member-as-active-code-membersetactive-code">3.6. Set member as Active : <code>memberSetActive</code></a></li>
+<li><a href="#set-member-as-active-code-membersetinactive-code">3.7. Set member as Active : <code>memberSetInactive</code></a></li>
 <li><a href="#sort-members-list-code-membersort-code">3.8. Sort members’ list : <code>memberSort</code></a></li>
 <li><a href="#selecting-a-member-code-memberselect-code">3.9. Selecting a member : <code>memberSelect</code></a></li>
 <li><a href="#viewing-help-code-help-code">3.10. Viewing help : <code>help</code></a></li>
@@ -45,7 +45,13 @@
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
-<li><a href="#command-summary">5. Command Summary</a></li>
+<li><a href="#command-summary">5. Command Summary</a>
+<ul class="sectlevel2">
+<li><a href="#general-commands">5.1. General Commands</a></li>
+<li><a href="#member-management-commands">5.2. Member Management Commands</a></li>
+<li><a href="#activity-management-commands">5.3. Activity Management Commands</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -323,10 +329,10 @@ Deletes the 1st member in the results of the <code>find</code> command.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="set-member-as-active-code-membersetactive-index-code"><a class="link" href="#set-member-as-active-code-membersetactive-index-code">3.6. Set member as Active : <code>memberSetActive Index</code></a></h3>
+<h3 id="set-member-as-active-code-membersetactive-code"><a class="link" href="#set-member-as-active-code-membersetactive-code">3.6. Set member as Active : <code>memberSetActive</code></a></h3>
 <div class="paragraph">
 <p>Sets a member who was inactive, back to active.
-Format: <code>memberSetActive Index</code></p>
+Format: <code>memberSetActive INDEX</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -354,16 +360,16 @@ Format: <code>memberSetActive Index</code></p>
 <p><code>list</code><br></p>
 </li>
 <li>
-<p><code>memberSetActive Index</code></p>
+<p><code>memberSetActive 3</code></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="set-member-as-active-code-membersetinactive-index-code"><a class="link" href="#set-member-as-active-code-membersetinactive-index-code">3.7. Set member as Active : <code>memberSetInactive Index</code></a></h3>
+<h3 id="set-member-as-active-code-membersetinactive-code"><a class="link" href="#set-member-as-active-code-membersetinactive-code">3.7. Set member as Active : <code>memberSetInactive</code></a></h3>
 <div class="paragraph">
 <p>Sets a member who was active, to inactive. Recommended for students who have graduated.
-Format: <code>memberSetInactive Index</code></p>
+Format: <code>memberSetInactive INDEX</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -391,7 +397,7 @@ Format: <code>memberSetInactive Index</code></p>
 <p><code>list</code><br></p>
 </li>
 <li>
-<p><code>memberSetInactive Index</code></p>
+<p><code>memberSetInactive 3</code></p>
 </li>
 </ul>
 </div>
@@ -970,89 +976,121 @@ There is no need to save manually.</p>
 <div class="sect1">
 <h2 id="command-summary"><a class="link" href="#command-summary">5. Command Summary</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>This section provides a comprehensive list of commands that ClubManager offers.</p>
+</div>
+<div class="sect2">
+<h3 id="general-commands"><a class="link" href="#general-commands">5.1. General Commands</a></h3>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>memberAdd</strong> : <code>memberAdd n/NAME an/ADMIN_NUMBER p/PHONE_NUMBER e/EMAIL yos/YEAR_OF_STUDY m/MAJOR [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>memberAdd n/James Ong an/A0123456Y p/98765432 e/jamesong@example.com yos/year1 m/mathematics</code></p>
-</li>
-<li>
-<p><strong>memberClear</strong> : <code>memberClear</code></p>
-</li>
-<li>
-<p><strong>memberDelete</strong> : <code>memberDelete INDEX</code><br>
-e.g. <code>memberDelete 3</code></p>
-</li>
-<li>
-<p><strong>memberEdit</strong> : <code>memberEdit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>memberEdit 2 n/James Lee e/jameslee@example.com</code></p>
-</li>
-<li>
-<p><strong>memberFind</strong> : <code>memberFind KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>memberFind John</code></p>
-</li>
-<li>
-<p><strong>memberList</strong> : <code>list</code></p>
-</li>
-<li>
-<p><strong>help</strong> : <code>help</code></p>
-</li>
-<li>
-<p><strong>memberSelect</strong> : <code>memberSelect INDEX</code><br>
-e.g.<code>memberSelect 2</code></p>
-</li>
-<li>
-<p><strong>activityAdd</strong> : <code>activityAdd n/ACTIVITYNAME d/DATE t/TAG&#8230;&#8203;</code><br>
-e.g. <code>activityAdd n/Sentosa Outing d/16022019 t/cohesion</code></p>
-</li>
-<li>
-<p><strong>activityList</strong> : <code>activityList</code></p>
-</li>
-<li>
-<p><strong>activitySelect</strong> : <code>activitySelect ACTIVITY_INDEX</code><br>
-e.g. <code>activitySelect 2</code></p>
-</li>
-<li>
-<p><strong>activityFind</strong> : <code>activityFind KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>activityFind Workshop</code></p>
-</li>
-<li>
-<p><strong>activityArchive</strong> : <code>activityArchive ACTIVITY_INDEX</code><br>
-e.g. <code>activityArchive 1</code></p>
-</li>
-<li>
-<p><strong>activityUnarchive</strong> : <code>activityUnarchive ACTIVITY_INDEX</code><br>
-e.g. <code>activityUnarchive 1</code></p>
+<p><strong>Help</strong> : <code>help</code></p>
 </li>
 <li>
 <p><strong>History</strong> : <code>history</code></p>
 </li>
 <li>
-<p><strong>Undo</strong> : <code>undo</code></p>
-</li>
-<li>
 <p><strong>Redo</strong> : <code>redo</code></p>
 </li>
 <li>
-<p><strong>Edit an activity</strong> : <code>activityEdit ACTIVITY_INDEX [n/ACTIVITY_NAME] [d/DATE] [t/TAG] … `<br>
-e.g. `activityEdit 1 d/13022019</code></p>
+<p><strong>Undo</strong> : <code>undo</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="member-management-commands"><a class="link" href="#member-management-commands">5.2. Member Management Commands</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Add member</strong> : <code>memberAdd n/NAME an/ADMIN_NUMBER p/PHONE_NUMBER e/EMAIL yos/YEAR_OF_STUDY m/MAJOR [t/TAG]&#8230;&#8203;</code><br>
+e.g. <code>memberAdd n/James Ong an/A0123456Y p/98765432 e/jamesong@example.com yos/year1 m/mathematics</code></p>
 </li>
 <li>
-<p><strong>Sort all activities by date</strong> : <code>activitySort</code></p>
+<p><strong>Clear member list</strong> : <code>memberClear</code></p>
+</li>
+<li>
+<p><strong>Delete a member</strong> : <code>memberDelete INDEX</code><br>
+e.g. <code>memberDelete 3</code></p>
+</li>
+<li>
+<p><strong>Edit a member</strong> : <code>memberEdit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br>
+e.g. <code>memberEdit 2 n/James Lee e/jameslee@example.com</code></p>
+</li>
+<li>
+<p><strong>Find a member</strong> : <code>memberFind KEYWORD [MORE_KEYWORDS]</code><br>
+e.g. <code>memberFind John</code></p>
+</li>
+<li>
+<p><strong>List all members</strong> : <code>list</code></p>
+</li>
+<li>
+<p><strong>Select a member</strong> : <code>memberSelect INDEX</code><br>
+e.g.<code>memberSelect 2</code></p>
+</li>
+<li>
+<p><strong>Set a member as active</strong> :  <code>memberSetActive INDEX</code><br>
+e.g. <code>memberSetActive 3</code></p>
+</li>
+<li>
+<p><strong>Set a member as inactive</strong> : <code>memberSetInactive INDEX</code><br>
+e.g. <code>memberSetInactive 3</code></p>
+</li>
+<li>
+<p><strong>Sort the member list</strong> : <code>memberSort n/NAME an/ADMIN_NUMBER p/PHONE_NUMBER e/EMAIL yos/YEAR_OF_STUDY m/MAJOR</code><br>
+e.g. <code>memberSort NAME</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="activity-management-commands"><a class="link" href="#activity-management-commands">5.3. Activity Management Commands</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Add a activity</strong> : <code>activityAdd n/ACTIVITYNAME d/DATE t/TAG&#8230;&#8203;</code><br>
+e.g. <code>activityAdd n/Sentosa Outing d/16022019 t/cohesion</code></p>
 </li>
 <li>
 <p><strong>Add a member to activity</strong> : <code>activityAddMember ACTIVITY_INDEX MATRIC_NO</code><br>
 e.g. <code>activityAddMember 1 A1234567N</code></p>
 </li>
 <li>
-<p><strong>Delete a member from activity</strong> : <code>activityDeleteMember ACTIVITY_INDEX MATRIC_NO</code><br>
-e.g. <code>activityDeleteMember 1 A1234567N</code></p>
+<p><strong>Archive an activity</strong> : <code>activityArchive ACTIVITY_INDEX</code><br>
+e.g. <code>activityArchive 1</code></p>
 </li>
 <li>
 <p><strong>Delete an activity</strong> : <code>activityDelete ACTIVITY_INDEX</code><br>
 e.g. <code>activityDelete 1</code></p>
 </li>
+<li>
+<p><strong>Delete a member from activity</strong> : <code>activityDeleteMember ACTIVITY_INDEX MATRIC_NO</code><br>
+e.g. <code>activityDeleteMember 1 A1234567N</code></p>
+</li>
+<li>
+<p><strong>Edit an activity</strong> : <code>activityEdit ACTIVITY_INDEX [n/ACTIVITY_NAME] [d/DATE] [t/TAG] … `<br>
+e.g. `activityEdit 1 d/13022019</code></p>
+</li>
+<li>
+<p><strong>Find an activity</strong> : <code>activityFind KEYWORD [MORE_KEYWORDS]</code><br>
+e.g. <code>activityFind Workshop</code></p>
+</li>
+<li>
+<p><strong>List all the activities</strong> : <code>activityList</code></p>
+</li>
+<li>
+<p><strong>Select an activity</strong> : <code>activitySelect ACTIVITY_INDEX</code><br>
+e.g. <code>activitySelect 2</code></p>
+</li>
+<li>
+<p><strong>Sort all activities by date</strong> : <code>activitySort</code></p>
+</li>
+<li>
+<p><strong>Unarchive an activity</strong> : <code>activityUnarchive ACTIVITY_INDEX</code><br>
+e.g. <code>activityUnarchive 1</code></p>
+</li>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-04 03:11:50 UTC</div></div></div></body></html>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-04 03:54:57 UTC</div></div></div></body></html>
