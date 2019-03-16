@@ -37,6 +37,7 @@ public class MainWindow extends UiPart<Stage> {
     private PersonListPanel personListPanel;
     private ResultDisplay resultDisplay;
     private HelpWindow helpWindow;
+    private ActivityListPanel activityListPanel;
 
     @FXML
     private StackPane browserPlaceholder;
@@ -118,6 +119,7 @@ public class MainWindow extends UiPart<Stage> {
 
         personListPanel = new PersonListPanel(logic.getFilteredPersonList(), logic.selectedPersonProperty(),
                 logic::setSelectedPerson);
+        activityListPanel = new ActivityListPanel(logic.getFilteredActivityList());
         personListPanelPlaceholder.getChildren().add(personListPanel.getRoot());
 
         resultDisplay = new ResultDisplay();
@@ -158,6 +160,19 @@ public class MainWindow extends UiPart<Stage> {
         primaryStage.show();
     }
 
+
+    /**
+     * Change mode
+     */
+    @FXML
+    private void handleChangeMode() {
+        if (AppMode.getMODE() == 1) {
+            personListPanelPlaceholder.getChildren().remove(1);
+            return;
+        }
+        personListPanelPlaceholder.getChildren().add(activityListPanel.getRoot());
+    }
+
     /**
      * Closes the application.
      */
@@ -187,7 +202,7 @@ public class MainWindow extends UiPart<Stage> {
 
             if (commandResult.isChangeMode()) {
                 System.out.println("Mode changed to " + AppMode.getMODE()); // FOR DEBUGGING
-                //handleChangeMode();
+                handleChangeMode();
             }
 
             if (commandResult.isShowHelp()) {
