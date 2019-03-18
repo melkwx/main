@@ -1,6 +1,6 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>AddressBook Level 4 - Developer Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>ClubManager - Developer Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level3">AB-3</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">Club-Manager</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link active" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/cs2103-ay1819s2-w13-2/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>AddressBook Level 4 - Developer Guide</h1></div><div id="content"><div id="preamble">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level3">AB-3</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">Club-Manager</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link active" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/cs2103-ay1819s2-w13-2/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>ClubManager - Developer Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>By: <code>Team SE-EDU</code>      Since: <code>Jun 2016</code>      Licence: <code>MIT</code></p>
@@ -32,7 +32,8 @@
 <li><a href="#undo-redo-feature">3.1. Undo/Redo feature</a></li>
 <li><a href="#proposed-data-encryption">3.2. [Proposed] Data Encryption</a></li>
 <li><a href="#logging">3.3. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.4. Configuration</a></li>
+<li><a href="#configuration">3.4. Configuration</a></li>
+<li><a href="#activity-model">3.5. Activity Model</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a>
@@ -786,7 +787,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.4, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">[Implementation-Configuration]</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -817,9 +818,46 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.4. Configuration</a></h3>
+<h3 id="configuration"><a class="link" href="#configuration">3.4. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
+</div>
+<div class="paragraph">
+<p>[[Implementation-Activity Model]]</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="activity-model"><a class="link" href="#activity-model">3.5. Activity Model</a></h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/ModelComponentWithActivityList.png" alt="ModelComponentWithActivityList" width="800">
+</div>
+<div class="title">Figure 9. Structure of the Activity Model Component</div>
+</div>
+<div class="paragraph">
+<p><strong>API</strong> : <a href="https://github.com/cs2103-ay1819s2-w13-2/main/src/main/java/seedu/address/model/Model.java"><code>Model.java</code></a></p>
+</div>
+<div class="paragraph">
+<p>The updated <code>Model</code>,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>stores a <code>UserPref</code> object that represents the user&#8217;s preferences.</p>
+</li>
+<li>
+<p>stores the Address Book data.</p>
+</li>
+<li>
+<p>exposes an unmodifiable <code>ObservableList&lt;Person&gt;</code> that can be 'observed' e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change.</p>
+</li>
+<li>
+<p>exposes an unmodifiable <code>ObservableList&lt;Activity&gt;</code> that can be 'observed' e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change.</p>
+</li>
+<li>
+<p>Each activity can have a HashMap of <code>Person</code> Object for attendance.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -883,7 +921,7 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 <div class="content">
 <img src="images/chrome_save_as_pdf.png" alt="chrome save as pdf" width="300">
 </div>
-<div class="title">Figure 9. Saving documentation as PDF files in Chrome</div>
+<div class="title">Figure 10. Saving documentation as PDF files in Chrome</div>
 </div>
 </div>
 <div class="sect2">
@@ -2022,12 +2060,6 @@ for <code>RemarkCommandParser</code>.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CCA main committee member</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">see which members are interested in attending a future event</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">decide whether to execute the activity or to cancel it based on the level of  interests.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CCA main committee member</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">view the activities that a member has participated.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">better select applicants for the main committee positions.</p></td>
 </tr>
@@ -2131,9 +2163,6 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="sect1">
 <h2 id="use-cases"><a class="link" href="#use-cases">Appendix D: Use Cases</a></h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>(For all use cases below, the <strong>System</strong> is the <code>AddressBook</code> and the <strong>Admin</strong> is the <code>user</code>, unless specified otherwise)</p>
-</div>
 <h3 id="use-case-add-member" class="discrete">Use case: Add Member</h3>
 <div class="paragraph">
 <p><strong>Main Success Scenario (MSS)</strong></p>
@@ -2457,9 +2486,6 @@ Use case resumes at step 1.</p>
 </li>
 <li>
 <p>Club Manager adds the activity</p>
-</li>
-<li>
-<p>Use case ends.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2779,10 +2805,9 @@ Use case resumes at step 1.</p>
 </ul>
 </div>
 <h3 id="use-case-list-activity" class="discrete">Use case: List Activity</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Main Success Scenario (MSS)*</p>
+<div class="paragraph">
+<p><strong>Main Success Scenario (MSS)</strong></p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2795,9 +2820,6 @@ Use case resumes at step 1.</p>
 </div>
 </li>
 </ol>
-</div>
-</li>
-</ul>
 </div>
 <div class="paragraph">
 <p><strong>Extensions</strong></p>
@@ -2813,10 +2835,9 @@ Use case resumes at step 1.</p>
 </ul>
 </div>
 <h3 id="use-case-select-activity" class="discrete">Use case: Select Activity</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Main Success Scenario (MSS)*</p>
+<div class="paragraph">
+<p><strong>Main Success Scenario (MSS)</strong></p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2835,9 +2856,6 @@ Use case resumes at step 1.</p>
 </div>
 </li>
 </ol>
-</div>
-</li>
-</ul>
 </div>
 <div class="paragraph">
 <p><strong>Extensions</strong></p>
@@ -2866,10 +2884,9 @@ Use case resumes at step 1.</p>
 </ul>
 </div>
 <h3 id="use-case-find-activity" class="discrete">Use case: Find Activity</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Main Success Scenario (MSS)*</p>
+<div class="paragraph">
+<p><strong>Main Success Scenario (MSS)</strong></p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2885,9 +2902,6 @@ Use case resumes at step 1.</p>
 </div>
 </li>
 </ol>
-</div>
-</li>
-</ul>
 </div>
 <div class="paragraph">
 <p><strong>Extensions</strong></p>
@@ -2912,138 +2926,6 @@ Use case resumes at step 1.</p>
 <p>3a. The list is empty</p>
 <div class="paragraph">
 <p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-<h3 id="use-case-archive-activity" class="discrete">Use case: Archive Activity</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Main Success Scenario (MSS)*</p>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>User requests to list activities</p>
-</li>
-<li>
-<p>Club Manager shows a list of activities</p>
-</li>
-<li>
-<p>User request to archive an activity from the displayed list</p>
-</li>
-<li>
-<p>Club Manager archives the selected activity</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Extensions</strong></p>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2a. The list is empty.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-<li>
-<p>3a. The given index is invalid.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>3a1. Club Manager shows an error message.</p>
-<div class="paragraph">
-<p>Use case resumes at step 2.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>3b. The activity at the given index is already archived.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>3b1. Club Manager shows an error message.</p>
-<div class="paragraph">
-<p>Use case resumes at step 2.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<h3 id="use-case-unarchive-activity" class="discrete">Use case: Unarchive Activity</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Main Success Scenario (MSS)*</p>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>User requests to list activities</p>
-</li>
-<li>
-<p>Club Manager shows a list of activities</p>
-</li>
-<li>
-<p>User request to unarchive an activity from the displayed list</p>
-</li>
-<li>
-<p>Club Manager unarchives the selected activity</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Extensions</strong></p>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2a. The list is empty.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-<li>
-<p>3a. The given index is invalid.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>3a1. Club Manager shows an error message.</p>
-<div class="paragraph">
-<p>Use case resumes at step 2.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>3b. The activity at the given index is not archived.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>3b1. Club Manager shows an error message.</p>
-<div class="paragraph">
-<p>Use case resumes at step 2.</p>
-</div>
-</li>
-</ul>
 </div>
 </li>
 </ul>
@@ -3296,4 +3178,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-05 16:33:10 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-18 10:10:23 UTC</div></div></div></body></html>

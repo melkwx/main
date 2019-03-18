@@ -31,17 +31,15 @@
 <li><a href="#listing-all-activities-code-activitylist-code">3.16. Listing all activities : <code>activityList</code></a></li>
 <li><a href="#selecting-an-activity-code-activityselect-code">3.17. Selecting an activity : <code>activitySelect</code></a></li>
 <li><a href="#locating-activities-by-name-code-activityfind-code">3.18. Locating activities by name: <code>activityFind</code></a></li>
-<li><a href="#archiving-a-done-activity-code-activityarchive-code">3.19. Archiving a done activity: <code>activityArchive</code></a></li>
-<li><a href="#removing-an-activity-from-the-archive-code-activityunarchive-code">3.20. Removing an activity from the archive: <code>activityUnarchive</code></a></li>
-<li><a href="#edit-an-activity-code-activityedit-code">3.21. Edit an activity: <code>activityEdit</code></a></li>
-<li><a href="#sort-all-activities-by-date-code-activitysort-code">3.22. Sort all activities by date <code>activitySort</code></a></li>
-<li><a href="#add-a-member-to-activity-code-activityaddmember-code">3.23. Add a member to activity <code>activityAddMember</code></a></li>
-<li><a href="#delete-a-member-from-activity-code-activitydeletemember-code">3.24. Delete a member from activity <code>activityDeleteMember</code></a></li>
-<li><a href="#delete-an-activity-code-activitydelete-code">3.25. Delete an activity <code>activityDelete</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code-2">3.26. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.27. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.28. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.29. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#edit-an-activity-code-activityedit-code">3.19. Edit an activity: <code>activityEdit</code></a></li>
+<li><a href="#sort-all-activities-by-date-code-activitysort-code">3.20. Sort all activities by date <code>activitySort</code></a></li>
+<li><a href="#add-a-member-to-activity-code-activityaddmember-code">3.21. Add a member to activity <code>activityAddMember</code></a></li>
+<li><a href="#delete-a-member-from-activity-code-activitydeletemember-code">3.22. Delete a member from activity <code>activityDeleteMember</code></a></li>
+<li><a href="#delete-an-activity-code-activitydelete-code">3.23. Delete an activity <code>activityDelete</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code-2">3.24. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.25. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">3.26. Saving the data</a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.27. Encrypting data files <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -721,65 +719,7 @@ Returns any activity having names <code>HTML</code>, <code>CSS</code>, or <code>
 </div>
 </div>
 <div class="sect2">
-<h3 id="archiving-a-done-activity-code-activityarchive-code"><a class="link" href="#archiving-a-done-activity-code-activityarchive-code">3.19. Archiving a done activity: <code>activityArchive</code></a></h3>
-<div class="paragraph">
-<p>Changing the status of the activity to done and adding the activity to archive.<br>
-Format: <code>activityArchive ACTIVITY_INDEX</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Change the status and archive the activity at the specified <code>ACTIVITY_INDEX</code> which refers to the index number shown in the displayed activity list.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>activityArchive 1</code><br>
-Archive the first activity in the displayed activity list</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="removing-an-activity-from-the-archive-code-activityunarchive-code"><a class="link" href="#removing-an-activity-from-the-archive-code-activityunarchive-code">3.20. Removing an activity from the archive: <code>activityUnarchive</code></a></h3>
-<div class="paragraph">
-<p>Changing the status of the activity back to ongoing and removing the activity from the archive.<br>
-Format: <code>activityUnarchive ACTIVITY_INDEX</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Change the status and archive the activity at the specified <code>ACTIVITY_INDEX</code> which refers to the index number shown in the displayed activity list.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:
-* <code>activityUnarchive 1</code><br>
-Unarchive the first activity in the displayed activity list</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="edit-an-activity-code-activityedit-code"><a class="link" href="#edit-an-activity-code-activityedit-code">3.21. Edit an activity: <code>activityEdit</code></a></h3>
+<h3 id="edit-an-activity-code-activityedit-code"><a class="link" href="#edit-an-activity-code-activityedit-code">3.19. Edit an activity: <code>activityEdit</code></a></h3>
 <div class="paragraph">
 <p>Edits an existing activity in the activity list
 Format: `activityEdit ACTIVITY_INDEX [n/ACTIVITY_NAME] [d/DATE] [t/TAG] … `</p>
@@ -827,14 +767,14 @@ Clears all existing tags of the second activity.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="sort-all-activities-by-date-code-activitysort-code"><a class="link" href="#sort-all-activities-by-date-code-activitysort-code">3.22. Sort all activities by date <code>activitySort</code></a></h3>
+<h3 id="sort-all-activities-by-date-code-activitysort-code"><a class="link" href="#sort-all-activities-by-date-code-activitysort-code">3.20. Sort all activities by date <code>activitySort</code></a></h3>
 <div class="paragraph">
 <p>Sorts all activities in the activity list according to the event date.
 Format: <code>activitySort</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-a-member-to-activity-code-activityaddmember-code"><a class="link" href="#add-a-member-to-activity-code-activityaddmember-code">3.23. Add a member to activity <code>activityAddMember</code></a></h3>
+<h3 id="add-a-member-to-activity-code-activityaddmember-code"><a class="link" href="#add-a-member-to-activity-code-activityaddmember-code">3.21. Add a member to activity <code>activityAddMember</code></a></h3>
 <div class="paragraph">
 <p>Adds an existing member to an existing activity to indicate that they will be going for the activity.
 Format: <code>activityAddMember ACTIVITY_INDEX MATRIC_NO</code></p>
@@ -869,7 +809,7 @@ Adds the member with matric number <code>A1234567N</code> to the attending list 
 </div>
 </div>
 <div class="sect2">
-<h3 id="delete-a-member-from-activity-code-activitydeletemember-code"><a class="link" href="#delete-a-member-from-activity-code-activitydeletemember-code">3.24. Delete a member from activity <code>activityDeleteMember</code></a></h3>
+<h3 id="delete-a-member-from-activity-code-activitydeletemember-code"><a class="link" href="#delete-a-member-from-activity-code-activitydeletemember-code">3.22. Delete a member from activity <code>activityDeleteMember</code></a></h3>
 <div class="paragraph">
 <p>Removes an existing member who has already indicated that he/she will be attending the activity from the attending list of the activity.
 Format: <code>activityDeleteMember ACTIVITY_INDEX MATRIC_NO</code></p>
@@ -904,7 +844,7 @@ Removes the member with matric number A1234567N from activity 1’s attending li
 </div>
 </div>
 <div class="sect2">
-<h3 id="delete-an-activity-code-activitydelete-code"><a class="link" href="#delete-an-activity-code-activitydelete-code">3.25. Delete an activity <code>activityDelete</code></a></h3>
+<h3 id="delete-an-activity-code-activitydelete-code"><a class="link" href="#delete-an-activity-code-activitydelete-code">3.23. Delete an activity <code>activityDelete</code></a></h3>
 <div class="paragraph">
 <p>Deletes an existing activity in the activity list
 Format: <code>activityDelete ACTIVITY_INDEX</code></p>
@@ -936,28 +876,28 @@ Deletes the first activity in the displayed activity list</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code-2"><a class="link" href="#clearing-all-entries-code-clear-code-2">3.26. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code-2"><a class="link" href="#clearing-all-entries-code-clear-code-2">3.24. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
 <p>Clears all entries from the address book.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.27. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.25. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.28. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.26. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.29. Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.27. Encrypting data files <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
@@ -1056,10 +996,6 @@ e.g. <code>activityAdd n/Sentosa Outing d/16022019 t/cohesion</code></p>
 e.g. <code>activityAddMember 1 A1234567N</code></p>
 </li>
 <li>
-<p><strong>Archive an activity</strong> : <code>activityArchive ACTIVITY_INDEX</code><br>
-e.g. <code>activityArchive 1</code></p>
-</li>
-<li>
 <p><strong>Delete an activity</strong> : <code>activityDelete ACTIVITY_INDEX</code><br>
 e.g. <code>activityDelete 1</code></p>
 </li>
@@ -1085,12 +1021,8 @@ e.g. <code>activitySelect 2</code></p>
 <li>
 <p><strong>Sort all activities by date</strong> : <code>activitySort</code></p>
 </li>
-<li>
-<p><strong>Unarchive an activity</strong> : <code>activityUnarchive ACTIVITY_INDEX</code><br>
-e.g. <code>activityUnarchive 1</code></p>
-</li>
 </ul>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-05 16:33:10 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-18 10:10:23 UTC</div></div></div></body></html>
