@@ -13,33 +13,11 @@
 <li><a href="#quick-start">2. Quick Start</a></li>
 <li><a href="#Features">3. Features</a>
 <ul class="sectlevel2">
-<li><a href="#adding-a-member-code-memberadd-code">3.1. Adding a member: <code>memberAdd</code></a></li>
-<li><a href="#listing-all-members-code-memberlist-code">3.2. Listing all members : <code>memberList</code></a></li>
-<li><a href="#editing-a-member-code-memberedit-code">3.3. Editing a member : <code>memberEdit</code></a></li>
-<li><a href="#locating-members-by-name-code-memberfind-code">3.4. Locating members by name: <code>memberFind</code></a></li>
-<li><a href="#deleting-a-member-code-memberdelete-code">3.5. Deleting a member : <code>memberDelete</code></a></li>
-<li><a href="#set-member-as-active-code-membersetactive-code">3.6. Set member as Active : <code>memberSetActive</code></a></li>
-<li><a href="#set-member-as-active-code-membersetinactive-code">3.7. Set member as Active : <code>memberSetInactive</code></a></li>
-<li><a href="#sort-members-list-code-membersort-code">3.8. Sort members’ list : <code>memberSort</code></a></li>
-<li><a href="#selecting-a-member-code-memberselect-code">3.9. Selecting a member : <code>memberSelect</code></a></li>
-<li><a href="#viewing-help-code-help-code">3.10. Viewing help : <code>help</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.11. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">3.12. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">3.13. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.14. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#adding-an-activity-code-activityadd-code">3.15. Adding an activity : <code>activityAdd</code></a></li>
-<li><a href="#listing-all-activities-code-activitylist-code">3.16. Listing all activities : <code>activityList</code></a></li>
-<li><a href="#selecting-an-activity-code-activityselect-code">3.17. Selecting an activity : <code>activitySelect</code></a></li>
-<li><a href="#locating-activities-by-name-code-activityfind-code">3.18. Locating activities by name: <code>activityFind</code></a></li>
-<li><a href="#edit-an-activity-code-activityedit-code">3.19. Edit an activity: <code>activityEdit</code></a></li>
-<li><a href="#sort-all-activities-by-date-code-activitysort-code">3.20. Sort all activities by date <code>activitySort</code></a></li>
-<li><a href="#add-a-member-to-activity-code-activityaddmember-code">3.21. Add a member to activity <code>activityAddMember</code></a></li>
-<li><a href="#delete-a-member-from-activity-code-activitydeletemember-code">3.22. Delete a member from activity <code>activityDeleteMember</code></a></li>
-<li><a href="#delete-an-activity-code-activitydelete-code">3.23. Delete an activity <code>activityDelete</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code-2">3.24. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.25. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.26. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.27. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#general-features">3.1. General Features</a></li>
+<li><a href="#member-management-features">3.2. Member Management Features</a></li>
+<li><a href="#activity-management-features">3.3. Activity Management Features</a></li>
+<li><a href="#saving-the-data">3.4. Saving the data</a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.5. Encrypting data files <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -83,7 +61,7 @@ started. Enjoy!</p>
 <p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
 <div class="imageblock">
 <div class="content">
-<img src="images/Ui.png" alt="Ui" width="790">
+<img src="images/UiUpdate.png" alt="UiUpdate" width="790">
 </div>
 </div>
 </li>
@@ -145,7 +123,131 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-member-code-memberadd-code"><a class="link" href="#adding-a-member-code-memberadd-code">3.1. Adding a member: <code>memberAdd</code></a></h3>
+<h3 id="general-features"><a class="link" href="#general-features">3.1. General Features</a></h3>
+<div class="sect3">
+<h4 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.1.1. Clearing all entries : <code>clear</code></a></h4>
+<div class="paragraph">
+<p>Clears all entries from the address book.<br>
+Format: <code>clear</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.1.2. Exiting the program : <code>exit</code></a></h4>
+<div class="paragraph">
+<p>Exits the program.<br>
+Format: <code>exit</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3.1.3. Viewing help : <code>help</code></a></h4>
+<div class="paragraph">
+<p>Displays a list of commands and the help messages to guide the user.
+Format: <code>help</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.1.4. Listing entered commands : <code>history</code></a></h4>
+<div class="paragraph">
+<p>Lists all the commands that you have entered in reverse chronological order.<br>
+Format: <code>history</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Pressing the <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows will display the previous and next input respectively in the command box.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.1.5. Redoing the previously undone command : <code>redo</code></a></h4>
+<div class="paragraph">
+<p>Reverses the most recent <code>undo</code> command.<br>
+Format: <code>redo</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete 1</code><br>
+<code>undo</code> (reverses the <code>delete 1</code> command)<br>
+<code>redo</code> (reapplies the <code>delete 1</code> command)<br></p>
+</li>
+<li>
+<p><code>delete 1</code><br>
+<code>redo</code><br>
+The <code>redo</code> command fails as there are no <code>undo</code> commands executed previously.</p>
+</li>
+<li>
+<p><code>delete 1</code><br>
+<code>clear</code><br>
+<code>undo</code> (reverses the <code>clear</code> command)<br>
+<code>undo</code> (reverses the <code>delete 1</code> command)<br>
+<code>redo</code> (reapplies the <code>delete 1</code> command)<br>
+<code>redo</code> (reapplies the <code>clear</code> command)<br></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.1.6. Undoing previous command : <code>undo</code></a></h4>
+<div class="paragraph">
+<p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
+Format: <code>undo</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Undoable commands: those commands that modify the address book&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete 1</code><br>
+<code>list</code><br>
+<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
+</li>
+<li>
+<p><code>select 1</code><br>
+<code>list</code><br>
+<code>undo</code><br>
+The <code>undo</code> command fails as there are no undoable commands executed previously.</p>
+</li>
+<li>
+<p><code>delete 1</code><br>
+<code>clear</code><br>
+<code>undo</code> (reverses the <code>clear</code> command)<br>
+<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="member-management-features"><a class="link" href="#member-management-features">3.2. Member Management Features</a></h3>
+<div class="sect3">
+<h4 id="adding-a-member-code-memberadd-code"><a class="link" href="#adding-a-member-code-memberadd-code">3.2.1. Adding a member: <code>memberAdd</code></a></h4>
 <div class="paragraph">
 <p>You can add members to ClubManager.<br>
 Format: <code>memberAdd n/NAME an/ADMIN_NUMBER p/PHONE_NUMBER e/EMAIL yos/YEAR_OF_STUDY m/MAJOR [t/TAG]&#8230;&#8203;</code></p>
@@ -190,15 +292,49 @@ A member can have any number of tags (including 0)
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="listing-all-members-code-memberlist-code"><a class="link" href="#listing-all-members-code-memberlist-code">3.2. Listing all members : <code>memberList</code></a></h3>
+<div class="sect3">
+<h4 id="deleting-a-member-code-memberdelete-code"><a class="link" href="#deleting-a-member-code-memberdelete-code">3.2.2. Deleting a member : <code>memberDelete</code></a></h4>
 <div class="paragraph">
-<p>Shows a list of all members in ClubManager.<br>
-Format: <code>memberList</code></p>
+<p>Deletes the specified member from ClubManager.<br>
+Format: <code>memberDelete INDEX</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes the member at the specified <code>INDEX</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed member list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="editing-a-member-code-memberedit-code"><a class="link" href="#editing-a-member-code-memberedit-code">3.3. Editing a member : <code>memberEdit</code></a></h3>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list</code><br>
+<code>memberDelete 2</code><br>
+Deletes the 2nd member in ClubManager.</p>
+</li>
+<li>
+<p><code>memberFind Betsy</code><br>
+<code>memberDelete 1</code><br>
+Deletes the 1st member in the results of the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="editing-a-member-code-memberedit-code"><a class="link" href="#editing-a-member-code-memberedit-code">3.2.3. Editing a member : <code>memberEdit</code></a></h4>
 <div class="paragraph">
 <p>Edits an existing member in ClubManager.<br>
 Format: <code>memberEdit INDEX n/NAME an/ADMIN_NUMBER p/PHONE_NUMBER e/EMAIL yos/YEAR_OF_STUDY m/MAJOR [t/TAG]</code></p>
@@ -240,8 +376,8 @@ Edits the name of the 2nd member to be <code>Betsy Crower</code> and clears all 
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="locating-members-by-name-code-memberfind-code"><a class="link" href="#locating-members-by-name-code-memberfind-code">3.4. Locating members by name: <code>memberFind</code></a></h3>
+<div class="sect3">
+<h4 id="locating-members-by-name-code-memberfind-code"><a class="link" href="#locating-members-by-name-code-memberfind-code">3.2.4. Locating members by name: <code>memberFind</code></a></h4>
 <div class="paragraph">
 <p>Finds members whose names contain any of the given keywords.<br>
 Format: <code>memberFind KEYWORD [MORE_KEYWORDS]</code></p>
@@ -285,163 +421,15 @@ Returns any member having names <code>Betsy</code>, <code>Tim</code>, or <code>J
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="deleting-a-member-code-memberdelete-code"><a class="link" href="#deleting-a-member-code-memberdelete-code">3.5. Deleting a member : <code>memberDelete</code></a></h3>
+<div class="sect3">
+<h4 id="listing-all-members-code-memberlist-code"><a class="link" href="#listing-all-members-code-memberlist-code">3.2.5. Listing all members : <code>memberList</code></a></h4>
 <div class="paragraph">
-<p>Deletes the specified member from ClubManager.<br>
-Format: <code>memberDelete INDEX</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Deletes the member at the specified <code>INDEX</code>.</p>
-</li>
-<li>
-<p>The index refers to the index number shown in the displayed member list.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-</ul>
+<p>Shows a list of all members in ClubManager.<br>
+Format: <code>memberList</code></p>
 </div>
 </div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>list</code><br>
-<code>memberDelete 2</code><br>
-Deletes the 2nd member in ClubManager.</p>
-</li>
-<li>
-<p><code>memberFind Betsy</code><br>
-<code>memberDelete 1</code><br>
-Deletes the 1st member in the results of the <code>find</code> command.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="set-member-as-active-code-membersetactive-code"><a class="link" href="#set-member-as-active-code-membersetactive-code">3.6. Set member as Active : <code>memberSetActive</code></a></h3>
-<div class="paragraph">
-<p>Sets a member who was inactive, back to active.
-Format: <code>memberSetActive INDEX</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Sets the status for the member at the specified <code>INDEX</code> as active.</p>
-</li>
-<li>
-<p>The index refers to the index number shown in the displayed member list.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>list</code><br></p>
-</li>
-<li>
-<p><code>memberSetActive 3</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="set-member-as-active-code-membersetinactive-code"><a class="link" href="#set-member-as-active-code-membersetinactive-code">3.7. Set member as Active : <code>memberSetInactive</code></a></h3>
-<div class="paragraph">
-<p>Sets a member who was active, to inactive. Recommended for students who have graduated.
-Format: <code>memberSetInactive INDEX</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Sets the status for the member at the specified <code>INDEX</code> as active.</p>
-</li>
-<li>
-<p>The index refers to the index number shown in the displayed member list.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>list</code><br></p>
-</li>
-<li>
-<p><code>memberSetInactive 3</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="sort-members-list-code-membersort-code"><a class="link" href="#sort-members-list-code-membersort-code">3.8. Sort members’ list : <code>memberSort</code></a></h3>
-<div class="paragraph">
-<p>Sort the members list by a member’s attribute in ascending order
-Format: <code>memberSort n/NAME an/ADMIN_NUMBER p/PHONE_NUMBER e/EMAIL yos/YEAR_OF_STUDY m/MAJOR</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Sorts the member at the specified attribute. The attribute refers to the name, admin number, phone number, email, year of study, and major. There can only be a single attribute provided.</p>
-</li>
-<li>
-<p>At least one of the attributes are provided.</p>
-</li>
-<li>
-<p>Members will be sorted in ascending order based on the attribute.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>list</code><br></p>
-</li>
-<li>
-<p><code>memberSort NAME</code></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Sorts the list by name.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="selecting-a-member-code-memberselect-code"><a class="link" href="#selecting-a-member-code-memberselect-code">3.9. Selecting a member : <code>memberSelect</code></a></h3>
+<div class="sect3">
+<h4 id="selecting-a-member-code-memberselect-code"><a class="link" href="#selecting-a-member-code-memberselect-code">3.2.6. Selecting a member : <code>memberSelect</code></a></h4>
 <div class="paragraph">
 <p>Selects the member identified by the index number used in the displayed member list.<br>
 Format: <code>memberSelect INDEX</code></p>
@@ -481,120 +469,126 @@ Selects the 1st member in the results of the <code>find</code> command.</p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3.10. Viewing help : <code>help</code></a></h3>
+<div class="sect3">
+<h4 id="set-member-as-active-code-membersetactive-code"><a class="link" href="#set-member-as-active-code-membersetactive-code">3.2.7. Set member as Active : <code>memberSetActive</code></a></h4>
 <div class="paragraph">
-<p>Displays a list of commands and the help messages to guide the user.
-Format: <code>help</code></p>
+<p>Sets a member who was inactive, back to active.
+Format: <code>memberSetActive INDEX</code></p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.11. Clearing all entries : <code>clear</code></a></h3>
-<div class="paragraph">
-<p>You can clears all entries from the members’ list.
-Format: <code>clear</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.12. Listing entered commands : <code>history</code></a></h3>
-<div class="paragraph">
-<p>Lists all the commands that you have entered in reverse chronological order.<br>
-Format: <code>history</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Pressing the <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows will display the previous and next input respectively in the command box.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.13. Undoing previous command : <code>undo</code></a></h3>
-<div class="paragraph">
-<p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
-Format: <code>undo</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Undoable commands: those commands that modify the address book&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
+<div class="sidebarblock">
+<div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p><code>delete 1</code><br>
-<code>list</code><br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
+<p>Sets the status for the member at the specified <code>INDEX</code> as active.</p>
 </li>
 <li>
-<p><code>select 1</code><br>
-<code>list</code><br>
-<code>undo</code><br>
-The <code>undo</code> command fails as there are no undoable commands executed previously.</p>
+<p>The index refers to the index number shown in the displayed member list.</p>
 </li>
 <li>
-<p><code>delete 1</code><br>
-<code>clear</code><br>
-<code>undo</code> (reverses the <code>clear</code> command)<br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.14. Redoing the previously undone command : <code>redo</code></a></h3>
-<div class="paragraph">
-<p>Reverses the most recent <code>undo</code> command.<br>
-Format: <code>redo</code></p>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p>Example:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>delete 1</code><br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>delete 1</code> command)<br></p>
+<p><code>list</code><br></p>
 </li>
 <li>
-<p><code>delete 1</code><br>
-<code>redo</code><br>
-The <code>redo</code> command fails as there are no <code>undo</code> commands executed previously.</p>
-</li>
-<li>
-<p><code>delete 1</code><br>
-<code>clear</code><br>
-<code>undo</code> (reverses the <code>clear</code> command)<br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>clear</code> command)<br></p>
+<p><code>memberSetActive 3</code></p>
 </li>
 </ul>
 </div>
 </div>
+<div class="sect3">
+<h4 id="set-member-as-active-code-membersetinactive-code"><a class="link" href="#set-member-as-active-code-membersetinactive-code">3.2.8. Set member as Active : <code>memberSetInactive</code></a></h4>
+<div class="paragraph">
+<p>Sets a member who was active, to inactive. Recommended for students who have graduated.
+Format: <code>memberSetInactive INDEX</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Sets the status for the member at the specified <code>INDEX</code> as active.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed member list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list</code><br></p>
+</li>
+<li>
+<p><code>memberSetInactive 3</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="sort-members-list-code-membersort-code"><a class="link" href="#sort-members-list-code-membersort-code">3.2.9. Sort members’ list : <code>memberSort</code></a></h4>
+<div class="paragraph">
+<p>Sort the members list by a member’s attribute in ascending order
+Format: <code>memberSort n/NAME an/ADMIN_NUMBER p/PHONE_NUMBER e/EMAIL yos/YEAR_OF_STUDY m/MAJOR</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Sorts the member at the specified attribute. The attribute refers to the name, admin number, phone number, email, year of study, and major. There can only be a single attribute provided.</p>
+</li>
+<li>
+<p>At least one of the attributes are provided.</p>
+</li>
+<li>
+<p>Members will be sorted in ascending order based on the attribute.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list</code><br>
+<code>memberSort name</code><br>
+Sorts the list by name.</p>
+</li>
+<li>
+<p><code>list</code><br>
+<code>memberSort major</code><br>
+Sorts the list by major.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <div class="sect2">
-<h3 id="adding-an-activity-code-activityadd-code"><a class="link" href="#adding-an-activity-code-activityadd-code">3.15. Adding an activity : <code>activityAdd</code></a></h3>
+<h3 id="activity-management-features"><a class="link" href="#activity-management-features">3.3. Activity Management Features</a></h3>
+<div class="sect3">
+<h4 id="adding-an-activity-code-activityadd-code"><a class="link" href="#adding-an-activity-code-activityadd-code">3.3.1. Adding an activity : <code>activityAdd</code></a></h4>
 <div class="paragraph">
 <p>Adds a new activity to the activity list
 Format: <code>activityAdd n/ACTIVITYNAME d/DATE t/TAG&#8230;&#8203;</code></p>
@@ -625,28 +619,53 @@ An activity can have any number of tags (including 0)
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="listing-all-activities-code-activitylist-code"><a class="link" href="#listing-all-activities-code-activitylist-code">3.16. Listing all activities : <code>activityList</code></a></h3>
+<div class="sect3">
+<h4 id="add-a-member-to-activity-code-activityaddmember-code"><a class="link" href="#add-a-member-to-activity-code-activityaddmember-code">3.3.2. Add a member to activity <code>activityAddMember</code></a></h4>
 <div class="paragraph">
-<p>Shows a list of all activities in the activity list.<br>
-Format: <code>activityList</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="selecting-an-activity-code-activityselect-code"><a class="link" href="#selecting-an-activity-code-activityselect-code">3.17. Selecting an activity : <code>activitySelect</code></a></h3>
-<div class="paragraph">
-<p>Selects the activity identified by the index number used in the displayed activity list.<br>
-Format: <code>activitySelect ACTIVITY_INDEX</code></p>
+<p>Adds an existing member to an existing activity to indicate that they will be going for the activity.
+Format: <code>activityAddMember ACTIVITY_INDEX MATRIC_NO</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Selects the activity and displays the specific details of the activity at the specified <code>ACTIVITY_INDEX</code>.</p>
+<p>Adds a member to the activity at the specified <code>ACTIVITY_INDEX</code> which refers to the index number shown in the displayed activity list.</p>
 </li>
 <li>
-<p>The index refers to the index number shown in the displayed activity list.</p>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>MATRIC_NO must be a currently existing entry in any existing member’s MATRIC_NO information column in the member list.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>activityAddMember 1 A1234567N</code><br>
+Adds the member with matric number <code>A1234567N</code> to the attending list for activity 1.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="archiving-a-done-activity-code-activityarchive-code"><a class="link" href="#archiving-a-done-activity-code-activityarchive-code">3.3.3. Archiving a done activity: <code>activityArchive</code></a></h4>
+<div class="paragraph">
+<p>Changing the status of the activity to done and adding the activity to archive.<br>
+Format: <code>activityArchive ACTIVITY_INDEX</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Change the status and archive the activity at the specified <code>ACTIVITY_INDEX</code> which refers to the index number shown in the displayed activity list.</p>
 </li>
 <li>
 <p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
@@ -661,42 +680,27 @@ Format: <code>activitySelect ACTIVITY_INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>activityList</code><br>
-<code>activitySelect 2</code><br>
-Selects the 2nd person in the displayed activity list.</p>
-</li>
-<li>
-<p><code>activityFind workshop</code><br>
-<code>activitySelect 1</code><br>
-Selects the 1st activity in the results of the <code>find</code> command.</p>
+<p><code>activityArchive 1</code><br>
+Archive the first activity in the displayed activity list</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="locating-activities-by-name-code-activityfind-code"><a class="link" href="#locating-activities-by-name-code-activityfind-code">3.18. Locating activities by name: <code>activityFind</code></a></h3>
+<div class="sect3">
+<h4 id="delete-an-activity-code-activitydelete-code"><a class="link" href="#delete-an-activity-code-activitydelete-code">3.3.4. Delete an activity <code>activityDelete</code></a></h4>
 <div class="paragraph">
-<p>Finds activities whose names contain any of the given keywords.<br>
-Format: <code>activityFind KEYWORD [MORE_KEYWORDS]</code></p>
+<p>Deletes an existing activity in the activity list
+Format: <code>activityDelete ACTIVITY_INDEX</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>The search is case insensitive. e.g <code>workshop</code> will match <code>Workshop</code></p>
+<p>Deletes the activity at the specified <code>ACTIVITY_INDEX</code> which refers to the index number shown in the displayed activity list.</p>
 </li>
 <li>
-<p>The order of the keywords does not matter. e.g. <code>Talk Seminar</code> will match <code>Seminar Talk</code></p>
-</li>
-<li>
-<p>Only the name is searched.</p>
-</li>
-<li>
-<p>Only full words will be matched e.g. <code>CS</code> will not match <code>CSS</code></p>
-</li>
-<li>
-<p>Activities matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>HTML workshop</code> will return <code>HTML camp</code>, <code>CSS workshop</code></p>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 </ul>
 </div>
@@ -708,18 +712,49 @@ Format: <code>activityFind KEYWORD [MORE_KEYWORDS]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>activityFind Workshop</code><br>
-Returns <code>HTML workshop</code> and <code>CSS workshop</code></p>
-</li>
-<li>
-<p><code>find HTML CSS Javascript</code><br>
-Returns any activity having names <code>HTML</code>, <code>CSS</code>, or <code>Javascript</code></p>
+<p><code>activityDelete 1</code><br>
+Deletes the first activity in the displayed activity list</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="edit-an-activity-code-activityedit-code"><a class="link" href="#edit-an-activity-code-activityedit-code">3.19. Edit an activity: <code>activityEdit</code></a></h3>
+<div class="sect3">
+<h4 id="delete-a-member-from-activity-code-activitydeletemember-code"><a class="link" href="#delete-a-member-from-activity-code-activitydeletemember-code">3.3.5. Delete a member from activity <code>activityDeleteMember</code></a></h4>
+<div class="paragraph">
+<p>Removes an existing member who has already indicated that he/she will be attending the activity from the attending list of the activity.
+Format: <code>activityDeleteMember ACTIVITY_INDEX MATRIC_NO</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Removes a member from the attending list of the activity at the specified <code>ACTIVITY_INDEX</code> which refers to the index number shown in the displayed activity list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>MATRIC_NO must be a currently existing entry in the specified activity’s attending list.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>activityDeleteMember 1 A1234567N</code><br>
+Removes the member with matric number A1234567N from activity 1’s attending list.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="edit-an-activity-code-activityedit-code"><a class="link" href="#edit-an-activity-code-activityedit-code">3.3.6. Edit an activity: <code>activityEdit</code></a></h4>
 <div class="paragraph">
 <p>Edits an existing activity in the activity list
 Format: `activityEdit ACTIVITY_INDEX [n/ACTIVITY_NAME] [d/DATE] [t/TAG] … `</p>
@@ -766,138 +801,142 @@ Clears all existing tags of the second activity.</p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="sort-all-activities-by-date-code-activitysort-code"><a class="link" href="#sort-all-activities-by-date-code-activitysort-code">3.20. Sort all activities by date <code>activitySort</code></a></h3>
+<div class="sect3">
+<h4 id="finding-activities-by-name-code-activityfind-code"><a class="link" href="#finding-activities-by-name-code-activityfind-code">3.3.7. Finding activities by name: <code>activityFind</code></a></h4>
+<div class="paragraph">
+<p>Finds activities whose names contain any of the given keywords.<br>
+Format: <code>activityFind KEYWORD [MORE_KEYWORDS]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The search is case insensitive. e.g <code>workshop</code> will match <code>Workshop</code></p>
+</li>
+<li>
+<p>The order of the keywords does not matter. e.g. <code>Talk Seminar</code> will match <code>Seminar Talk</code></p>
+</li>
+<li>
+<p>Only the name is searched.</p>
+</li>
+<li>
+<p>Only full words will be matched e.g. <code>CS</code> will not match <code>CSS</code></p>
+</li>
+<li>
+<p>Activities matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>HTML workshop</code> will return <code>HTML camp</code>, <code>CSS workshop</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>activityFind Workshop</code><br>
+Returns <code>HTML workshop</code> and <code>CSS workshop</code></p>
+</li>
+<li>
+<p><code>find HTML CSS Javascript</code><br>
+Returns any activity having names <code>HTML</code>, <code>CSS</code>, or <code>Javascript</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="listing-all-activities-code-activitylist-code"><a class="link" href="#listing-all-activities-code-activitylist-code">3.3.8. Listing all activities : <code>activityList</code></a></h4>
+<div class="paragraph">
+<p>Shows a list of all activities in the activity list.<br>
+Format: <code>activityList</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="selecting-an-activity-code-activityselect-code"><a class="link" href="#selecting-an-activity-code-activityselect-code">3.3.9. Selecting an activity : <code>activitySelect</code></a></h4>
+<div class="paragraph">
+<p>Selects the activity identified by the index number used in the displayed activity list.<br>
+Format: <code>activitySelect ACTIVITY_INDEX</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Selects the activity and displays the specific details of the activity at the specified <code>ACTIVITY_INDEX</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed activity list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>activityList</code><br>
+<code>activitySelect 2</code><br>
+Selects the 2nd person in the displayed activity list.</p>
+</li>
+<li>
+<p><code>activityFind workshop</code><br>
+<code>activitySelect 1</code><br>
+Selects the 1st activity in the results of the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="sort-all-activities-by-date-code-activitysort-code"><a class="link" href="#sort-all-activities-by-date-code-activitysort-code">3.3.10. Sort all activities by date <code>activitySort</code></a></h4>
 <div class="paragraph">
 <p>Sorts all activities in the activity list according to the event date.
 Format: <code>activitySort</code></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="add-a-member-to-activity-code-activityaddmember-code"><a class="link" href="#add-a-member-to-activity-code-activityaddmember-code">3.21. Add a member to activity <code>activityAddMember</code></a></h3>
+<div class="sect3">
+<h4 id="removing-an-activity-from-the-archive-code-activityunarchive-code"><a class="link" href="#removing-an-activity-from-the-archive-code-activityunarchive-code">3.3.11. Removing an activity from the archive: <code>activityUnarchive</code></a></h4>
 <div class="paragraph">
-<p>Adds an existing member to an existing activity to indicate that they will be going for the activity.
-Format: <code>activityAddMember ACTIVITY_INDEX MATRIC_NO</code></p>
+<p>Changing the status of the activity back to ongoing and removing the activity from the archive.<br>
+Format: <code>activityUnarchive ACTIVITY_INDEX</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Adds a member to the activity at the specified <code>ACTIVITY_INDEX</code> which refers to the index number shown in the displayed activity list.</p>
+<p>Change the status and archive the activity at the specified <code>ACTIVITY_INDEX</code> which refers to the index number shown in the displayed activity list.</p>
 </li>
 <li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-<li>
-<p>MATRIC_NO must be a currently existing entry in any existing member’s MATRIC_NO information column in the member list.</p>
+<p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p>Examples:
+* <code>activityUnarchive 1</code><br>
+Unarchive the first activity in the displayed activity list</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>activityAddMember 1 A1234567N</code><br>
-Adds the member with matric number <code>A1234567N</code> to the attending list for activity 1.</p>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="delete-a-member-from-activity-code-activitydeletemember-code"><a class="link" href="#delete-a-member-from-activity-code-activitydeletemember-code">3.22. Delete a member from activity <code>activityDeleteMember</code></a></h3>
-<div class="paragraph">
-<p>Removes an existing member who has already indicated that he/she will be attending the activity from the attending list of the activity.
-Format: <code>activityDeleteMember ACTIVITY_INDEX MATRIC_NO</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Removes a member from the attending list of the activity at the specified <code>ACTIVITY_INDEX</code> which refers to the index number shown in the displayed activity list.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-<li>
-<p>MATRIC_NO must be a currently existing entry in the specified activity’s attending list.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>activityDeleteMember 1 A1234567N</code><br>
-Removes the member with matric number A1234567N from activity 1’s attending list.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="delete-an-activity-code-activitydelete-code"><a class="link" href="#delete-an-activity-code-activitydelete-code">3.23. Delete an activity <code>activityDelete</code></a></h3>
-<div class="paragraph">
-<p>Deletes an existing activity in the activity list
-Format: <code>activityDelete ACTIVITY_INDEX</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Deletes the activity at the specified <code>ACTIVITY_INDEX</code> which refers to the index number shown in the displayed activity list.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>activityDelete 1</code><br>
-Deletes the first activity in the displayed activity list</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code-2"><a class="link" href="#clearing-all-entries-code-clear-code-2">3.24. Clearing all entries : <code>clear</code></a></h3>
-<div class="paragraph">
-<p>Clears all entries from the address book.<br>
-Format: <code>clear</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.25. Exiting the program : <code>exit</code></a></h3>
-<div class="paragraph">
-<p>Exits the program.<br>
-Format: <code>exit</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.26. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.4. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.27. Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.5. Encrypting data files <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
@@ -996,6 +1035,10 @@ e.g. <code>activityAdd n/Sentosa Outing d/16022019 t/cohesion</code></p>
 e.g. <code>activityAddMember 1 A1234567N</code></p>
 </li>
 <li>
+<p><strong>Archive an activity</strong> : <code>activityArchive ACTIVITY_INDEX</code><br>
+e.g. <code>activityArchive 1</code></p>
+</li>
+<li>
 <p><strong>Delete an activity</strong> : <code>activityDelete ACTIVITY_INDEX</code><br>
 e.g. <code>activityDelete 1</code></p>
 </li>
@@ -1021,8 +1064,12 @@ e.g. <code>activitySelect 2</code></p>
 <li>
 <p><strong>Sort all activities by date</strong> : <code>activitySort</code></p>
 </li>
+<li>
+<p><strong>Unarchive an activity</strong> : <code>activityUnarchive ACTIVITY_INDEX</code><br>
+e.g. <code>activityUnarchive 1</code></p>
+</li>
 </ul>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-18 10:10:23 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-19 09:48:21 UTC</div></div></div></body></html>
