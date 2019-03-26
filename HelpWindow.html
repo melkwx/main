@@ -249,45 +249,99 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 <div class="sect3">
 <h4 id="adding-a-member-code-memberadd-code"><a class="link" href="#adding-a-member-code-memberadd-code">3.2.1. Adding a member: <code>memberAdd</code></a></h4>
 <div class="paragraph">
-<p>You can add members to ClubManager.<br>
-Format: <code>memberAdd n/NAME an/ADMIN_NUMBER p/PHONE_NUMBER e/EMAIL yos/YEAR_OF_STUDY m/MAJOR [t/TAG]&#8230;&#8203;</code></p>
+<p>You can add members to ClubManager.<br></p>
 </div>
-<div class="sidebarblock">
-<div class="content">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 23.0769%;">
+<col style="width: 38.4615%;">
+<col style="width: 38.4616%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Information of Member</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NAME refers to the name of the member.</p>
+<p class="tableblock">Only alphabets are accepted.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">John Sim</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Matric Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MATRIC_NUMBER refers to the member&#8217;s matriculation number.</p>
+<p class="tableblock">Only 9 Alphanumeric characters are accepted.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A0123456Z</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Phone Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PHONE_NUMBER refers to the member&#8217;s phone number.</p>
+<p class="tableblock">Only 8 digits are accepted.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">91234567</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Email Address</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EMAIL_ADDRESS refers to the member&#8217;s student/personal email address</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:johnsim@example.com">johnsim@example.com</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Address</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ADDRESS refers to the member&#8217;s home address.</p>
+<p class="tableblock">Alphanumeric and Special characters are acceptable.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jurong East Avenue 1 Block 2 #03-04</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Gender</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GENDER refers to the sex of the member, i.e. male or female</p>
+<p class="tableblock">Only "Male" or "Female" is accepted (case-insensitive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Male</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Year of Study</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">YEAR_OF_STUDY refers to the academic level (in years)
+in which the member is currently studying.</p>
+<p class="tableblock">Only Alphabets are accepted in the first input.</p>
+<p class="tableblock">Only Digits are accepted in the second input.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Year 1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Major</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MAJOR refers to the field of discipline in which member is currently enrolled in.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chemistry</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Tags</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TAGS refers to the hobbies and interests of the member.</p>
+<p class="tableblock">Only Alphabets are acceptable, restricted to a single word.</p>
+<p class="tableblock">A member can have any number of tags (including 0).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Swimming</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Format:</strong></p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>YEAR_OF_STUDY refers to the academic level (in years) in which the member is currently studying in YYYY format.</p>
-</li>
-<li>
-<p>MAJOR refers to the field of discipline in which member is currently enrolled in.</p>
+<p><code>memberAdd n/NAME mn/MATRIC_NUMBER p/PHONE_NUMBER e/EMAIL a/ yos/YEAR_OF_STUDY m/MAJOR [t/TAG]&#8230;&#8203;</code></p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-A member can have any number of tags (including 0)
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
-<p>Examples:</p>
+<p><strong>Examples:</strong></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>memberAdd n/James Ong an/A0123456Y p/98765432 e/jamesong@example.com yos/year1 m/mathematics</code></p>
+<p><code>memberAdd n/James Ong mn/A0123456Y p/98765432 e/jamesong@example.com a/123, Jurong West Ave 6, #08-111 g/male y/year 2 m/mathematics</code></p>
 </li>
 <li>
-<p><code>memberAdd n/Betsy Crower an/A0123456Y p/98765432 e/jamesong@example.com yos/year4 m/chemistry t/maincomm</code></p>
+<p><code>memberAdd n/Jane Lim mn/A0654321T p/91324756 e/janelim@example.com a/123, Sengkang Ave 6, #02-123 g/Female y/Year 3  m/physics t/Swimming</code></p>
 </li>
 </ul>
 </div>
@@ -422,10 +476,23 @@ Returns any member having names <code>Betsy</code>, <code>Tim</code>, or <code>J
 </div>
 </div>
 <div class="sect3">
-<h4 id="listing-all-members-code-memberlist-code"><a class="link" href="#listing-all-members-code-memberlist-code">3.2.5. Listing all members : <code>memberList</code></a></h4>
+<h4 id="listing-members-code-memberlist-code"><a class="link" href="#listing-members-code-memberlist-code">3.2.5. Listing members : <code>memberList</code></a></h4>
 <div class="paragraph">
 <p>Shows a list of all members in ClubManager.<br>
 Format: <code>memberList</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/memberList_example_all.png" alt="memberList example all" width="300">
+</div>
+</div>
+<div class="paragraph">
+<p>Shows a list of members by a particular year of study in ClubManager.<br>
+Format: <code>memberList yearOfStudy year 4</code></p>
+</div>
+<div class="paragraph">
+<p>Shows a list of members by a particular major
+Format: <code>memberList major computing</code></p>
 </div>
 </div>
 <div class="sect3">
@@ -470,84 +537,62 @@ Selects the 1st member in the results of the <code>find</code> command.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="set-member-as-active-code-membersetactive-code"><a class="link" href="#set-member-as-active-code-membersetactive-code">3.2.7. Set member as Active : <code>memberSetActive</code></a></h4>
+<h4 id="sort-members-list-code-membersort-code"><a class="link" href="#sort-members-list-code-membersort-code">3.2.7. Sort members’ list : <code>memberSort</code></a></h4>
 <div class="paragraph">
-<p>Sets a member who was inactive, back to active.
-Format: <code>memberSetActive INDEX</code></p>
+<p>Sort the members list by a member’s attribute in ascending order</p>
 </div>
+<div class="paragraph">
+<p><strong>Format</strong></p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 59%;">
+<colgroup>
+<col style="width: 37.5%;">
+<col style="width: 62.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Sort By</th>
+<th class="tableblock halign-left valign-top">Command Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">memberSort name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Matric Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">memberSort matricNumber</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Year of Study</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">memberSort yearOfStudy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Major</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">memberSort major</p></td>
+</tr>
+</tbody>
+</table>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Sets the status for the member at the specified <code>INDEX</code> as active.</p>
+<p>Sorts the member at the specified sorting criteria. The attribute refers to the name, matric number, phone number, email, year of study, and major. There can only be a single attribute provided.</p>
 </li>
 <li>
-<p>The index refers to the index number shown in the displayed member list.</p>
+<p>At least one of the sorting criteria are provided.</p>
 </li>
 <li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+<p>Members will be sorted in ascending order based on the sorting criteria.</p>
+</li>
+<li>
+<p>Within each of the sort criteria, the members are further sorted by name in ascending order.</p>
 </li>
 </ul>
 </div>
 </div>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>list</code><br></p>
-</li>
-<li>
-<p><code>memberSetActive 3</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="set-member-as-active-code-membersetinactive-code"><a class="link" href="#set-member-as-active-code-membersetinactive-code">3.2.8. Set member as Active : <code>memberSetInactive</code></a></h4>
-<div class="paragraph">
-<p>Sets a member who was active, to inactive. Recommended for students who have graduated.
-Format: <code>memberSetInactive INDEX</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Sets the status for the member at the specified <code>INDEX</code> as active.</p>
-</li>
-<li>
-<p>The index refers to the index number shown in the displayed member list.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>list</code><br></p>
-</li>
-<li>
-<p><code>memberSetInactive 3</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="sort-members-list-code-membersort-code"><a class="link" href="#sort-members-list-code-membersort-code">3.2.9. Sort members’ list : <code>memberSort</code></a></h4>
-<div class="paragraph">
-<p>Sort the members list by a member’s attribute in ascending order
-Format: <code>memberSort n/NAME an/ADMIN_NUMBER p/PHONE_NUMBER e/EMAIL yos/YEAR_OF_STUDY m/MAJOR</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -576,12 +621,26 @@ Format: <code>memberSort n/NAME an/ADMIN_NUMBER p/PHONE_NUMBER e/EMAIL yos/YEAR_
 <code>memberSort name</code><br>
 Sorts the list by name.</p>
 </li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/MemberSortCommand_sortby_name.png" alt="MemberSortCommand sortby name" width="790">
+</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p><code>list</code><br>
-<code>memberSort major</code><br>
-Sorts the list by major.</p>
+<code>memberSort yearOfStudy</code><br>
+Sorts the list by year of study.</p>
 </li>
 </ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/MemberSortCommand_sortby_yearofstudy.png" alt="MemberSortCommand sortby yearofstudy" width="790">
+</div>
 </div>
 </div>
 </div>
@@ -1008,15 +1067,7 @@ e.g. <code>memberFind John</code></p>
 e.g.<code>memberSelect 2</code></p>
 </li>
 <li>
-<p><strong>Set a member as active</strong> :  <code>memberSetActive INDEX</code><br>
-e.g. <code>memberSetActive 3</code></p>
-</li>
-<li>
-<p><strong>Set a member as inactive</strong> : <code>memberSetInactive INDEX</code><br>
-e.g. <code>memberSetInactive 3</code></p>
-</li>
-<li>
-<p><strong>Sort the member list</strong> : <code>memberSort n/NAME an/ADMIN_NUMBER p/PHONE_NUMBER e/EMAIL yos/YEAR_OF_STUDY m/MAJOR</code><br>
+<p><strong>Sort the member list</strong> : <code>memberSort n/NAME mn/MATRIC_NUMBER p/PHONE_NUMBER e/EMAIL a/ADDRESS g/GENDER yos/YEAR_OF_STUDY m/MAJOR</code><br>
 e.g. <code>memberSort NAME</code></p>
 </li>
 </ul>
@@ -1072,4 +1123,4 @@ e.g. <code>activityUnarchive 1</code></p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-25 09:12:51 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-26 14:20:14 UTC</div></div></div></body></html>
