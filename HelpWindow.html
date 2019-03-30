@@ -650,19 +650,21 @@ Sorts the list by year of study.</p>
 <h4 id="adding-an-activity-code-activityadd-code"><a class="link" href="#adding-an-activity-code-activityadd-code">3.3.1. Adding an activity : <code>activityAdd</code></a></h4>
 <div class="paragraph">
 <p>Adds a new activity to the activity list
-Format: <code>activityAdd n/ACTIVITYNAME d/DATE t/TAG&#8230;&#8203;</code></p>
+Format: <code>activityAdd n/ACTIVITYNAME d/DATETIME l/LOCATION [de/DESCRIPTION] [ic/INCHARGEMATRIC] &#8230;&#8203;</code></p>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-An activity can have any number of tags (including 0)
-</td>
-</tr>
-</table>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The fields of description and IC Matric are optional.</p>
+</li>
+<li>
+<p>The added activity will be displayed at the sorted position according to its time.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -670,10 +672,10 @@ An activity can have any number of tags (including 0)
 <div class="ulist">
 <ul>
 <li>
-<p><code>activityAdd n/Sentosa Outing d/16022019 t/cohesion</code></p>
+<p><code>activityAdd n/Sentosa Outing d/16022019 1000 l/Harbour Front MRT de/Bring swim suits.</code></p>
 </li>
 <li>
-<p><code>activityAdd n/HTML workshop d/1402019</code></p>
+<p><code>activityAdd n/HTML workshop d/1402019 l/ICube Auditorium ic/A0123456Z</code></p>
 </li>
 </ul>
 </div>
@@ -714,39 +716,7 @@ Adds the member with matric number <code>A1234567N</code> to the attending list 
 </div>
 </div>
 <div class="sect3">
-<h4 id="archiving-a-done-activity-code-activityarchive-code"><a class="link" href="#archiving-a-done-activity-code-activityarchive-code">3.3.3. Archiving a done activity: <code>activityArchive</code></a></h4>
-<div class="paragraph">
-<p>Changing the status of the activity to done and adding the activity to archive.<br>
-Format: <code>activityArchive ACTIVITY_INDEX</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Change the status and archive the activity at the specified <code>ACTIVITY_INDEX</code> which refers to the index number shown in the displayed activity list.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>activityArchive 1</code><br>
-Archive the first activity in the displayed activity list</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="delete-an-activity-code-activitydelete-code"><a class="link" href="#delete-an-activity-code-activitydelete-code">3.3.4. Delete an activity <code>activityDelete</code></a></h4>
+<h4 id="delete-an-activity-code-activitydelete-code"><a class="link" href="#delete-an-activity-code-activitydelete-code">3.3.3. Delete an activity <code>activityDelete</code></a></h4>
 <div class="paragraph">
 <p>Deletes an existing activity in the activity list
 Format: <code>activityDelete ACTIVITY_INDEX</code></p>
@@ -778,7 +748,7 @@ Deletes the first activity in the displayed activity list</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="delete-a-member-from-activity-code-activitydeletemember-code"><a class="link" href="#delete-a-member-from-activity-code-activitydeletemember-code">3.3.5. Delete a member from activity <code>activityDeleteMember</code></a></h4>
+<h4 id="delete-a-member-from-activity-code-activitydeletemember-code"><a class="link" href="#delete-a-member-from-activity-code-activitydeletemember-code">3.3.4. Delete a member from activity <code>activityDeleteMember</code></a></h4>
 <div class="paragraph">
 <p>Removes an existing member who has already indicated that he/she will be attending the activity from the attending list of the activity.
 Format: <code>activityDeleteMember ACTIVITY_INDEX MATRIC_NO</code></p>
@@ -813,7 +783,7 @@ Removes the member with matric number A1234567N from activity 1’s attending li
 </div>
 </div>
 <div class="sect3">
-<h4 id="edit-an-activity-code-activityedit-code"><a class="link" href="#edit-an-activity-code-activityedit-code">3.3.6. Edit an activity: <code>activityEdit</code></a></h4>
+<h4 id="edit-an-activity-code-activityedit-code"><a class="link" href="#edit-an-activity-code-activityedit-code">3.3.5. Edit an activity: <code>activityEdit</code></a></h4>
 <div class="paragraph">
 <p>Edits an existing activity in the activity list
 Format: `activityEdit ACTIVITY_INDEX [n/ACTIVITY_NAME] [d/DATE] [t/TAG] … `</p>
@@ -861,7 +831,7 @@ Clears all existing tags of the second activity.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="finding-activities-by-name-code-activityfind-code"><a class="link" href="#finding-activities-by-name-code-activityfind-code">3.3.7. Finding activities by name: <code>activityFind</code></a></h4>
+<h4 id="finding-activities-by-name-code-activityfind-code"><a class="link" href="#finding-activities-by-name-code-activityfind-code">3.3.6. Finding activities by name: <code>activityFind</code></a></h4>
 <div class="paragraph">
 <p>Finds activities whose names contain any of the given keywords.<br>
 Format: <code>activityFind KEYWORD [MORE_KEYWORDS]</code></p>
@@ -906,14 +876,14 @@ Returns any activity having names <code>HTML</code>, <code>CSS</code>, or <code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="listing-all-activities-code-activitylist-code"><a class="link" href="#listing-all-activities-code-activitylist-code">3.3.8. Listing all activities : <code>activityList</code></a></h4>
+<h4 id="listing-all-activities-code-activitylist-code"><a class="link" href="#listing-all-activities-code-activitylist-code">3.3.7. Listing all activities : <code>activityList</code></a></h4>
 <div class="paragraph">
 <p>Shows a list of all activities in the activity list.<br>
 Format: <code>activityList</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="selecting-an-activity-code-activityselect-code"><a class="link" href="#selecting-an-activity-code-activityselect-code">3.3.9. Selecting an activity : <code>activitySelect</code></a></h4>
+<h4 id="selecting-an-activity-code-activityselect-code"><a class="link" href="#selecting-an-activity-code-activityselect-code">3.3.8. Selecting an activity : <code>activitySelect</code></a></h4>
 <div class="paragraph">
 <p>Selects the activity identified by the index number used in the displayed activity list.<br>
 Format: <code>activitySelect ACTIVITY_INDEX</code></p>
@@ -954,36 +924,10 @@ Selects the 1st activity in the results of the <code>find</code> command.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sort-all-activities-by-date-code-activitysort-code"><a class="link" href="#sort-all-activities-by-date-code-activitysort-code">3.3.10. Sort all activities by date <code>activitySort</code></a></h4>
+<h4 id="sort-all-activities-by-date-code-activitysort-code"><a class="link" href="#sort-all-activities-by-date-code-activitysort-code">3.3.9. Sort all activities by date <code>activitySort</code></a></h4>
 <div class="paragraph">
 <p>Sorts all activities in the activity list according to the event date.
 Format: <code>activitySort</code></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="removing-an-activity-from-the-archive-code-activityunarchive-code"><a class="link" href="#removing-an-activity-from-the-archive-code-activityunarchive-code">3.3.11. Removing an activity from the archive: <code>activityUnarchive</code></a></h4>
-<div class="paragraph">
-<p>Changing the status of the activity back to ongoing and removing the activity from the archive.<br>
-Format: <code>activityUnarchive ACTIVITY_INDEX</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Change the status and archive the activity at the specified <code>ACTIVITY_INDEX</code> which refers to the index number shown in the displayed activity list.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:
-* <code>activityUnarchive 1</code><br>
-Unarchive the first activity in the displayed activity list</p>
 </div>
 </div>
 </div>
@@ -1078,16 +1022,12 @@ e.g. <code>memberSort NAME</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Add a activity</strong> : <code>activityAdd n/ACTIVITYNAME d/DATE t/TAG&#8230;&#8203;</code><br>
-e.g. <code>activityAdd n/Sentosa Outing d/16022019 t/cohesion</code></p>
+<p><strong>Add a activity</strong> : <code>activityAdd n/ACTIVITYNAME d/DATETIME l/LOCATION [de/DESCRIPTION] [ic/INCHARGEMATRIC] &#8230;&#8203;</code><br>
+e.g. <code>activityAdd n/Sentosa Outing d/16022019 1000 l/Harbour Front MRT de/Bring swim suits.</code></p>
 </li>
 <li>
 <p><strong>Add a member to activity</strong> : <code>activityAddMember ACTIVITY_INDEX MATRIC_NO</code><br>
 e.g. <code>activityAddMember 1 A1234567N</code></p>
-</li>
-<li>
-<p><strong>Archive an activity</strong> : <code>activityArchive ACTIVITY_INDEX</code><br>
-e.g. <code>activityArchive 1</code></p>
 </li>
 <li>
 <p><strong>Delete an activity</strong> : <code>activityDelete ACTIVITY_INDEX</code><br>
@@ -1115,12 +1055,8 @@ e.g. <code>activitySelect 2</code></p>
 <li>
 <p><strong>Sort all activities by date</strong> : <code>activitySort</code></p>
 </li>
-<li>
-<p><strong>Unarchive an activity</strong> : <code>activityUnarchive ACTIVITY_INDEX</code><br>
-e.g. <code>activityUnarchive 1</code></p>
-</li>
 </ul>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-29 11:06:29 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-30 07:46:52 UTC</div></div></div></body></html>
