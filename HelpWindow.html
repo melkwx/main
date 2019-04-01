@@ -61,7 +61,7 @@ started. Enjoy!</p>
 <p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
 <div class="imageblock">
 <div class="content">
-<img src="images/UiUpdate.png" alt="UiUpdate" width="790">
+<img src="images/Ui.png" alt="Ui" width="790">
 </div>
 </div>
 </li>
@@ -785,18 +785,63 @@ YYYYMMDD_HHMMSS_xxxxx_NameOfPerson.txt</p>
 <div class="sect3">
 <h4 id="adding-an-activity-code-activityadd-code"><a class="link" href="#adding-an-activity-code-activityadd-code">3.3.1. Adding an activity : <code>activityAdd</code></a></h4>
 <div class="paragraph">
-<p>Adds a new activity to the activity list
-Format: <code>activityAdd n/ACTIVITYNAME d/DATETIME l/LOCATION [de/DESCRIPTION] [ic/INCHARGEMATRIC] &#8230;&#8203;</code></p>
+<p>Adds a new activity to the activity list<br></p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 23.0769%;">
+<col style="width: 38.4615%;">
+<col style="width: 38.4616%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Information of Activity</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ActivityName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ACTIVITYNAME refers to the name of the activity.</p>
+<p class="tableblock"> Only alphabets are accepted.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sentosa Outing</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ActivityDateTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DATETIME refers to the date and time of the activity</p>
+<p class="tableblock">Activity Date and time should be in "dd/MM/YYYY HHMM" format, where dd, MM, YYYY refers
+to day of month, month and year respectively. HH refers to the hour in 24 hour format (
+0-23).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28/02/2019 2359</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ActivityLocation</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LOCATION refers to the location of an activity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kent Ridge MRT</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ActivityDescription</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DESCRIPTION refers to the detailed description of the activity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Meeting at MRT before leaving together.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Format: <code>activityAdd n/ACTIVITYNAME d/DATETIME l/LOCATION [de/DESCRIPTION] &#8230;&#8203;</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>The fields of description and IC Matric are optional.</p>
+<p>Inputing description is optional. If no description is found, the default description
+will be "More details to be added."</p>
 </li>
 <li>
-<p>The added activity will be displayed at the sorted position according to its time.</p>
+<p>The added activity will be displayed at the sorted position according to its time.<br>
+The ongoing activities will be display on top while the completed activity will be at
+the bottom of the list.</p>
 </li>
 </ul>
 </div>
@@ -814,6 +859,14 @@ Format: <code>activityAdd n/ACTIVITYNAME d/DATETIME l/LOCATION [de/DESCRIPTION] 
 <p><code>activityAdd n/HTML workshop d/1402019 l/ICube Auditorium ic/A0123456Z</code></p>
 </li>
 </ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ActivityAddCommand.png" alt="ActivityAddCommand" width="790">
+</div>
+</div>
+<div class="paragraph">
+<p>Adding activity to the correct position based on the time.</p>
 </div>
 </div>
 <div class="sect3">
@@ -967,10 +1020,36 @@ Clears all existing tags of the second activity.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="finding-activities-by-name-code-activityfind-code"><a class="link" href="#finding-activities-by-name-code-activityfind-code">3.3.6. Finding activities by name: <code>activityFind</code></a></h4>
+<h4 id="filtering-activities-by-date-code-activityfilter-code"><a class="link" href="#filtering-activities-by-date-code-activityfilter-code">3.3.6. Filtering activities by date: <code>activityFilter</code></a></h4>
 <div class="paragraph">
-<p>Finds activities whose names contain any of the given keywords.<br>
-Format: <code>activityFind KEYWORD [MORE_KEYWORDS]</code></p>
+<p>Filters the activities that is the given number of days away from today (inclusive)
+and displays them as a list with index numbers.
+Format: <code>activityFilter CONDITION NUMBEROFDAYS</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The filter condition must be specified. <code>+</code> is to filter future activities and <code>-</code> is to filter activities.</p>
+</li>
+<li>
+<p><code>NUMBEROFDAYS</code> refers to the range of days from the current date.</p>
+</li>
+<li>
+<p><code>NUMBEROFDAYS</code> <strong>must be a postive integer</strong> <code>1 2 3</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="finding-activities-by-criteria-code-activityfind-code"><a class="link" href="#finding-activities-by-criteria-code-activityfind-code">3.3.7. Finding activities by criteria: <code>activityFind</code></a></h4>
+<div class="paragraph">
+<p>Finds all activities whose attribute contain any of the specified keywords
+(case-insensitive) and displays them as a list with index numbers.<br>
+Format: <code>activityFind [a/] [n/] [de/] [l/] KEYWORD [MORE_KEYWORDS]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -983,7 +1062,12 @@ Format: <code>activityFind KEYWORD [MORE_KEYWORDS]</code></p>
 <p>The order of the keywords does not matter. e.g. <code>Talk Seminar</code> will match <code>Seminar Talk</code></p>
 </li>
 <li>
-<p>Only the name is searched.</p>
+<p>The search parameter is determined by the prefix. <code>a/</code> is to search all descriptive fields (ActivityName,
+ActivityLocation, ActivityDescription); <code>n/</code> searches for match in ActivityName; <code>l/</code> searches for match in
+ActivityLocation; <code>de/</code> searches for matches in ActivityDescription.</p>
+</li>
+<li>
+<p>There can be one and only one prefix.</p>
 </li>
 <li>
 <p>Only full words will be matched e.g. <code>CS</code> will not match <code>CSS</code></p>
@@ -1001,25 +1085,38 @@ Format: <code>activityFind KEYWORD [MORE_KEYWORDS]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>activityFind Workshop</code><br>
-Returns <code>HTML workshop</code> and <code>CSS workshop</code></p>
+<p><code>activityFind l/ Hall</code><br>
+Returns activities with location <code>University Hall</code> and <code>Eusoff Hall</code></p>
 </li>
 <li>
-<p><code>find HTML CSS Javascript</code><br>
+<p><code>activityFind n/ HTML CSS Javascript</code><br>
 Returns any activity having names <code>HTML</code>, <code>CSS</code>, or <code>Javascript</code></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="listing-all-activities-code-activitylist-code"><a class="link" href="#listing-all-activities-code-activitylist-code">3.3.7. Listing all activities : <code>activityList</code></a></h4>
+<h4 id="listing-all-activities-code-activitylist-code"><a class="link" href="#listing-all-activities-code-activitylist-code">3.3.8. Listing all activities : <code>activityList</code></a></h4>
 <div class="paragraph">
 <p>Shows a list of all activities in the activity list.<br>
 Format: <code>activityList</code></p>
 </div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>If the status of some activities have changed from <code>ONGOING</code> to <code>COMPLETED</code>, the
+<code>activityList</code> command will automatically update the status of these activities.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ActivityListCommand.png" alt="ActivityListCommand" width="790">
+</div>
+</div>
 </div>
 <div class="sect3">
-<h4 id="selecting-an-activity-code-activityselect-code"><a class="link" href="#selecting-an-activity-code-activityselect-code">3.3.8. Selecting an activity : <code>activitySelect</code></a></h4>
+<h4 id="selecting-an-activity-code-activityselect-code"><a class="link" href="#selecting-an-activity-code-activityselect-code">3.3.9. Selecting an activity : <code>activitySelect</code></a></h4>
 <div class="paragraph">
 <p>Selects the activity identified by the index number used in the displayed activity list.<br>
 Format: <code>activitySelect ACTIVITY_INDEX</code></p>
@@ -1057,13 +1154,6 @@ Selects the 2nd person in the displayed activity list.</p>
 Selects the 1st activity in the results of the <code>find</code> command.</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="sort-all-activities-by-date-code-activitysort-code"><a class="link" href="#sort-all-activities-by-date-code-activitysort-code">3.3.9. Sort all activities by date <code>activitySort</code></a></h4>
-<div class="paragraph">
-<p>Sorts all activities in the activity list according to the event date.
-Format: <code>activitySort</code></p>
 </div>
 </div>
 </div>
@@ -1178,8 +1268,12 @@ e.g. <code>activityDeleteMember 1 A1234567N</code></p>
 e.g. `activityEdit 1 d/13022019</code></p>
 </li>
 <li>
-<p><strong>Find an activity</strong> : <code>activityFind KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>activityFind Workshop</code></p>
+<p><strong>Find an activity</strong> : <code>activityFind [a/] [n/] [de/] [l/] KEYWORD [MORE_KEYWORDS]</code><br>
+e.g. <code>activityFind n/ Workshop</code></p>
+</li>
+<li>
+<p><strong>Filtering activities</strong> : <code>activityFilter CONDITION NUMBEROFDAYS</code><br>
+e.g. <code>activityFilter + 30</code></p>
 </li>
 <li>
 <p><strong>List all the activities</strong> : <code>activityList</code></p>
@@ -1188,11 +1282,8 @@ e.g. <code>activityFind Workshop</code></p>
 <p><strong>Select an activity</strong> : <code>activitySelect ACTIVITY_INDEX</code><br>
 e.g. <code>activitySelect 2</code></p>
 </li>
-<li>
-<p><strong>Sort all activities by date</strong> : <code>activitySort</code></p>
-</li>
 </ul>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-31 19:25:31 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-01 02:17:58 UTC</div></div></div></body></html>
